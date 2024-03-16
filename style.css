@@ -278,6 +278,7 @@ main {
 }
 
 .btn {
+  width: 100%;
   padding: 1.25rem;
   border-radius: 8px;
   border: transparent;
@@ -285,4 +286,24 @@ main {
 
   font-size: var(--fs-large);
   color: var(--white);
+}
+
+/* Completed state */
+.completed__state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2rem;
+
+  display: none;
+}
+
+.large__text {
+  font-size: 2rem;
+  word-spacing: 9px;
+}
+
+.small__text {
+  text-transform: none;
+  color: var(--dark-grayish-violet);
 }

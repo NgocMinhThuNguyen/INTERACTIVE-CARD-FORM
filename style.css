@@ -78,7 +78,7 @@ select {
   --light-grayish-violet: hsl(270, 3%, 87%);
   --dark-grayish-violet: hsl(279, 6%, 55%);
   --very-dark-violet: hsl(278, 68%, 11%);
-  --linear-gradient: hsl(249, 99%, 64%);
+  --linear-gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
   --red: hsl(0, 100%, 66%);
 
   --fs-small: .5625rem;

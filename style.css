@@ -91,6 +91,8 @@ body {
   gap: 3rem;
   justify-content: center;
   align-items: center;
+
+  font-family: "Space Grotesk", sans-serif;
 }
 
 .card__wrapper {

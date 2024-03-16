@@ -93,9 +93,16 @@ body {
   align-items: center;
 
   font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+}
+
+main {
+  max-width: 100%;
 }
 
 .card__wrapper {
+  max-width: 100%;
+
   display: grid;
   grid-template-columns: repeat(1, minmax(100px, 1fr));
 
@@ -193,4 +200,84 @@ body {
 .date__result {
   bottom: 1.25rem;
   right: 1.25rem;
+}
+
+/* Card form */
+.card__form {
+  max-width: 100%;
+  margin-top: 3rem;
+  padding: 0 1.5rem;
+
+  color: var(--very-dark-violet);  
+}
+
+.start__state {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  row-gap: 1.25rem;
+  column-gap: .6875rem;
+}
+
+.name__wrapper {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+
+.cardnumber__wrapper {
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
+
+.date__wrapper {
+  grid-column: 1/2;
+  grid-row: 3/4;
+
+  border: transparent;
+}
+
+.wrapper2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 8px;
+
+  margin-top: 9px;
+}
+
+.cvc__wrapper {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.start__state .btn {
+  grid-column: 1/3;
+  grid-row: 4/5;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.box {
+  padding: 1.25rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--light-grayish-violet);
+
+  outline-color: var(--linear-gradient);
+}
+
+.box::placeholder {
+  color: var(--light-grayish-violet);
+  font-size: var(--fs-large);
+}
+
+.btn {
+  padding: 1.25rem;
+  border-radius: 8px;
+  border: transparent;
+  background-color: var(--very-dark-violet);
+
+  font-size: var(--fs-large);
+  color: var(--white);
 }

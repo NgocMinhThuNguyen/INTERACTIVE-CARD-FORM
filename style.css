@@ -104,7 +104,7 @@ main {
   max-width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(1, minmax(100px, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 
   color: var(--white);
   font-size: var(--fs-small);
@@ -116,49 +116,44 @@ main {
   background: var(--linear-gradient);
 }
 
+.card__back, .card__front {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+}
+
+.back__img, .front__img {
+  grid-column: 1/4;
+  grid-row: 1/4;
+}
+
 /* Back card */
 .card__back {
   grid-column: 2/5;
   grid-row: 1/5;
 
   margin: 1.875rem 1.25rem auto 1rem; 
-  position: relative;
-}
-
-.back__img {
-  position: relative;
-  z-index: 2;
 }
 
 .cvc__result {
-  position: absolute;
-  z-index: 3;
-  top: 58px;
-  right: 25px;
+  grid-column: 1/4;
+  grid-row: 2/3;
+  justify-self: end;
+  margin-right: 37px;
 }
 
 /* Front card */
 .card__front {
   grid-column: 1/4;
   grid-row: 3/7;
+  align-items: center;
 
   margin-top: 1.6875rem;
   margin-left: 1rem;
-
-  position: relative;
-  z-index: 4;
-}
-
-.front__img {
-  position: relative;
-  z-index: 5;
 }
 
 .circles {
-  position: absolute;
-  top: 1.125rem;
-  left: 1.25rem;
-  z-index: 6;
+  grid-column: 1/2;
+  grid-row: 1/2;
 
   display: flex;
   align-items: center;
@@ -180,26 +175,36 @@ main {
   border: 1.5px solid var(--white);
 }
 
-.circles, .cardnumber__result, .name__result, .date__result {
-  position: absolute;
-  z-index: 6;
+.front__img {
+  grid-column: 1/4;
+  grid-row: 1/4;
 }
 
 .cardnumber__result {
-  bottom: 3.125rem;
-  left: 1.25rem;
+  grid-column: 1/4;
+  grid-row: 2/3;
 
   font-size: var(--fs-large);
+  
+  display: flex;
+  gap: 1rem;
 }
 
 .name__result {
-  bottom: 1.25rem;
-  left: 1.25rem;
+  grid-column: 1/2;
+  grid-row: 3/4;
 }
 
 .date__result {
-  bottom: 1.25rem;
-  right: 1.25rem;
+  grid-column: 3/4;
+  grid-row: 3/4;
+
+  justify-self: end;
+  margin-right: 1.25rem;
+}
+
+.circles, .name__result, .cardnumber__result {
+  margin-left: 1.25rem;
 }
 
 /* Card form */
